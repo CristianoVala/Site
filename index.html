@@ -148,7 +148,7 @@
     <p>© 2025 Cristiano Vala. All Rights Reserved.</p>
 </footer>
 
-<!-- ⭐ JAVASCRIPT DIRECTLY IN HTML ⭐ -->
+
 <script>
 // === TESTIMONIAL SLIDER ===
 const slides = document.querySelector('.slides');
@@ -157,27 +157,29 @@ const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
 let index = 0;
+const totalSlides = slideItems.length;
 
 function showSlide(i) {
-    index = (i + slideItems.length) % slideItems.length;
+    index = (i + totalSlides) % totalSlides;
     slides.style.transform = `translateX(-${index * 100}%)`;
 }
 
 nextBtn.addEventListener('click', () => showSlide(index + 1));
 prevBtn.addEventListener('click', () => showSlide(index - 1));
 
-setInterval(() => showSlide(index + 1), 5000);
+// Auto-slide every 5s
+let autoSlide = setInterval(() => showSlide(index + 1), 5000);
 
-// === STICKY NAVBAR ===
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
-    } else {
-        navbar.classList.remove('scrolled');
-    }
+// Stop auto-slide when user interacts
+[nextBtn, prevBtn].forEach(btn => {
+    btn.addEventListener('click', () => {
+        clearInterval(autoSlide);
+        autoSlide = setInterval(() => showSlide(index + 1), 5000);
+    });
 });
+</script>
 
+<script>
 // === HAMBURGER MENU ===
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
