@@ -183,39 +183,6 @@ h1, h2, h3 {
 }
 
 /* ---------------------------------------------------
-   HERO SECTION
---------------------------------------------------- */
-.hero {
-    text-align: center;
-    padding: 120px 0;
-}
-
-.hero h1 {
-    font-size: 2.8rem;
-}
-
-.hero p {
-    margin: 20px auto;
-    max-width: 600px;
-    color: #555;
-}
-
-.btn-primary {
-    display: inline-block;
-    padding: 12px 28px;
-    background: var(--primary);
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-.btn-primary:hover {
-    background: #0050cc;
-    transform: translateY(-2px);
-}
-
-/* ---------------------------------------------------
    SERVICES
 --------------------------------------------------- */
 .services-section {
@@ -262,7 +229,9 @@ h1, h2, h3 {
     text-align: center;
     text-decoration: none;
 }
-
+.portfolio-item a{
+    text-decoration: none;
+}
 .portfolio-img {
     height: 200px;
     background-size: cover;
