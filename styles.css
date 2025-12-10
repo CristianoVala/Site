@@ -75,6 +75,7 @@ header {
     list-style: none;
     display: flex;
     gap: 30px;
+   background: var(--light);
 }
 
 .nav-links a {
