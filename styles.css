@@ -59,7 +59,7 @@ h1, h2, h3 {
 }
 
 .logo {
-    color: #fff;
+    color: #111;
     font-size: 1.5rem;
     font-weight: bold;
 }
@@ -72,7 +72,7 @@ h1, h2, h3 {
 }
 
 .nav-links a {
-    color: #ccc;
+    color: #111;
     text-decoration: none;
     font-size: 1rem;
     transition: 0.3s;
@@ -98,7 +98,7 @@ h1, h2, h3 {
 .hamburger span {
     width: 28px;
     height: 3px;
-    background: #fff;
+    background: #111;
     transition: 0.3s;
 }
 
@@ -135,7 +135,7 @@ h1, h2, h3 {
 
     .nav-links a {
         font-size: 1.3rem;
-        color: #fff;
+        color: #111;
         text-shadow: 0 0 5px rgba(0,0,0,0.4);
     }
 
