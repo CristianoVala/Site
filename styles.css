@@ -87,6 +87,7 @@ h1, h2, h3 {
     flex-direction: column;
     cursor: pointer;
     gap: 6px;
+   z-index: 2050;
 }
 
 .hamburger span {
