@@ -315,8 +315,8 @@ h1, h2, h3 {
 }
 
 .Headshot{
-   width: 40vw;
-   height: 50vw;
+   width: 30vw;
+   height: 35vw;
    border-radius: 2rem;
    border-style: solid;
    border-width: medium;
@@ -328,7 +328,7 @@ h1, h2, h3 {
     margin: 20px auto;
     color: #555;
 }
-@media (max-width: 768px) {
+@media (max-width: 800px) {
    .Headshot{
       width: 90vw;
       height: 100vw;
