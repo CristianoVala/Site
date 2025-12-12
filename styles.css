@@ -173,16 +173,6 @@ h1, h2, h3 {
     .menu-toggle:checked + .hamburger span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
-   .navbar__socials {
-        margin-top: 30px;
-        display: flex;
-        gap: 25px;
-    }
-   .navbar__socials a {
-        font-size: 30px;
-        color: white;
-        transition: 0.3s ease;
-    }
 }
 /* ---------- SOCIAL ICONS UNDER MENU ---------- */
     .navbar__socials {
@@ -199,7 +189,19 @@ h1, h2, h3 {
     .navbar__socials a:hover {
         color: #0066ff;
     }
-
+@media (max-width: 900px) {
+   .navbar__socials {
+        margin-top: 30px;
+        display: flex;
+        gap: 25px;
+    }
+   .navbar__socials a {
+        font-size: 1.3rem;
+        text-shadow: 0 0 5px rgba(0,0,0,0.3);
+        color: #fff;
+        transition: 0.3s ease;
+    }
+}
 /* ---------------------------------------------------
    SERVICES
 --------------------------------------------------- */
