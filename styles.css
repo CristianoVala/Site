@@ -181,14 +181,14 @@ h1, h2, h3 {
     align-items: center;
 }
 
-.social-icons a svg {
+.social-icons a i {
     width: 24px;
     height: 24px;
     color: #111;
     transition: color 0.3s;
 }
 
-.social-icons a:hover svg {
+.social-icons a:hover i {
     color: #0066ff;
 }
 
@@ -210,13 +210,13 @@ h1, h2, h3 {
         transform: translateX(-50%);
     }
 
-    .mobile-only a svg {
+    .mobile-only a i {
         width: 28px;
         height: 28px;
         color: #fff;
     }
 
-    .mobile-only a:hover svg {
+    .mobile-only a:hover i {
         color: #00f0ff; /* Optional hover color */
     }
 }
