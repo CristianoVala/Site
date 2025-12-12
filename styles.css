@@ -104,7 +104,7 @@ h1, h2, h3 {
 }
 
 /* ===== Mobile Styles ===== */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
 
     .hamburger {
         display: flex;
@@ -179,7 +179,7 @@ h1, h2, h3 {
         gap: 25px;
     }
    .navbar__socials a {
-        font-size: 1rem;
+        font-size: 30px;
         color: white;
         transition: 0.3s ease;
     }
@@ -191,7 +191,7 @@ h1, h2, h3 {
     }
 
     .navbar__socials a {
-        font-size: 1rem;
+        font-size: 1.2rem;
         color: #111;
         transition: 0.3s ease;
     }
