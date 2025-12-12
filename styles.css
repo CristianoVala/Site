@@ -173,54 +173,27 @@ h1, h2, h3 {
     .menu-toggle:checked + .hamburger span:nth-child(3) {
         transform: translateY(-9px) rotate(-45deg);
     }
-}
-/* Social Media Icons */
-.social-icons {
-    display: flex;
-    gap: 15px;
-    align-items: center;
-}
-
-.navbar__socials a {
-        font-size: 30px;
-        color: black;
-        transition: 0.3s ease;
-    }
-
-    .navbar__socials a:hover {
-        color: rgb(252,15,192);
-    }
-}
-
-/* Desktop-only and mobile-only helpers */
-.desktop-only { display: flex; }
-.mobile-only { display: none; }
-
-/* ===== Mobile Styles ===== */
-@media (max-width: 768px) {
-    /* Hide desktop social icons on mobile */
-    .desktop-only { display: none; }
-
-    /* Show mobile social icons */
-    .mobile-only {
+   .navbar__socials {
+        margin-top: 30px;
         display: flex;
-        position: absolute;
-        bottom: 50px; /* Adjust spacing from bottom */
-        left: 50%;
-        transform: translateX(-50%);
+        gap: 25px;
+    }
+}
+/* ---------- SOCIAL ICONS UNDER MENU ---------- */
+    .navbar__socials {
+        display: flex;
+        gap: 25px;
     }
 
     .navbar__socials a {
         font-size: 30px;
-        color: white;
+        color: var(--grey);
         transition: 0.3s ease;
     }
 
     .navbar__socials a:hover {
         color: rgb(252,15,192);
     }
-}
-}
 
 /* ---------------------------------------------------
    SERVICES
