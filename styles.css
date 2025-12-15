@@ -347,6 +347,122 @@ h1, h2, h3 {
 }
 
 /* ---------------------------------------------------
+   SOCIAL MEDIA MANAGEMENT — CARD STYLE
+--------------------------------------------------- */
+.social-section {
+    padding: 60px 0;
+}
+
+.social-card {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 35px;
+    max-width: 780px;
+    margin: 40px auto 0;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+}
+
+/* Platforms */
+.social-platforms {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.platform {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #111;
+}
+
+.platform i {
+    font-size: 1.3rem;
+    color: #0066ff;
+}
+
+/* Toggle button (mobile only) */
+.social-toggle {
+    display: none;
+    width: 100%;
+    background: none;
+    border: none;
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 15px 0;
+    cursor: pointer;
+    color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-toggle span {
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
+}
+
+/* Content */
+.social-content {
+    margin-top: 10px;
+}
+
+.social-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px 20px;
+}
+
+.social-list li {
+    display: flex;
+    align-items: center;
+    color: #444;
+}
+
+.social-list i {
+    color: #0066ff;
+    margin-right: 10px;
+    font-size: 0.95rem;
+}
+
+/* ---------------------------------------------------
+   MOBILE COLLAPSE
+--------------------------------------------------- */
+@media (max-width: 600px) {
+
+    .social-card {
+        padding: 25px 22px;
+    }
+
+    .social-toggle {
+        display: flex;
+    }
+
+    .social-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease;
+    }
+
+    .social-card.active .social-content {
+        max-height: 500px;
+    }
+
+    .social-card.active .social-toggle span {
+        transform: rotate(45deg);
+    }
+
+    .social-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ---------------------------------------------------
    PORTFOLIO — PROFESSIONAL REDESIGN
 --------------------------------------------------- */
 .portfolio-section {
