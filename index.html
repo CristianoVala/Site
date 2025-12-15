@@ -245,24 +245,6 @@ let autoSlide = setInterval(() => showSlide(index + 1), 5000);
 });
 </script>
 
-<script>
-// === HAMBURGER MENU ===
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
-
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navMenu.classList.toggle('active');
-});
-
-// Close menu on click
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
-</script>
 
 </body>
 </html>
