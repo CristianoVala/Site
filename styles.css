@@ -228,77 +228,80 @@ h1, h2, h3 {
 }
 
 /* ---------------------------------------------------
-   PROCESS — ICONS & CONNECTING LINES
+   PROCESS — CLEAN CONSULTANT STYLE
 --------------------------------------------------- */
-.process-grid {
-    position: relative;
+.process-section {
+    padding: 80px 0;
 }
 
-/* Connecting line */
-.process-grid::before {
-    content: "";
-    position: absolute;
-    top: 55px;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(
-        to right,
-        rgba(0,102,255,0.1),
-        rgba(0,102,255,0.6),
-        rgba(0,102,255,0.1)
-    );
-    z-index: 0;
-}
-
-/* Card */
-.process-card {
-    position: relative;
-    z-index: 1;
-}
-
-/* Icon circle */
-.process-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
-    background: #0066ff;
-    color: #ffffff;
+.process-list {
+    max-width: 900px;
+    margin: 50px auto 0;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    margin-bottom: 18px;
-    box-shadow: 0 8px 20px rgba(0,102,255,0.35);
+    flex-direction: column;
+    gap: 35px;
 }
 
-/* Step number */
-.process-step {
-    font-size: 0.8rem;
+.process-item {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.process-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Large step number */
+.process-number {
+    font-size: 2.2rem;
     font-weight: 700;
-    letter-spacing: 1px;
+    color: rgba(0,0,0,0.12);
+    min-width: 60px;
+    line-height: 1;
+}
+
+/* Content */
+.process-content i {
+    font-size: 1.1rem;
     color: #0066ff;
     margin-bottom: 10px;
-    display: inline-block;
+    display: block;
 }
 
-/* Hover enhancement */
-.process-card:hover .process-icon {
-    transform: scale(1.08);
-    box-shadow: 0 12px 30px rgba(0,102,255,0.45);
+.process-content h3 {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.process-content p {
+    color: #555;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+/* Subtle hover */
+.process-item:hover .process-number {
+    color: #0066ff;
     transition: 0.3s ease;
 }
 
-/* Mobile — remove line */
-@media (max-width: 900px) {
-    .process-grid::before {
-        display: none;
+/* Mobile */
+@media (max-width: 700px) {
+    .process-item {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .process-icon {
-        margin-bottom: 14px;
+    .process-number {
+        font-size: 1.8rem;
     }
 }
+
 
 /* ---------------------------------------------------
    PORTFOLIO — PROFESSIONAL REDESIGN
