@@ -228,6 +228,79 @@ h1, h2, h3 {
 }
 
 /* ---------------------------------------------------
+   PROCESS — ICONS & CONNECTING LINES
+--------------------------------------------------- */
+.process-grid {
+    position: relative;
+}
+
+/* Connecting line */
+.process-grid::before {
+    content: "";
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        rgba(0,102,255,0.1),
+        rgba(0,102,255,0.6),
+        rgba(0,102,255,0.1)
+    );
+    z-index: 0;
+}
+
+/* Card */
+.process-card {
+    position: relative;
+    z-index: 1;
+}
+
+/* Icon circle */
+.process-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: #0066ff;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-bottom: 18px;
+    box-shadow: 0 8px 20px rgba(0,102,255,0.35);
+}
+
+/* Step number */
+.process-step {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #0066ff;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Hover enhancement */
+.process-card:hover .process-icon {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(0,102,255,0.45);
+    transition: 0.3s ease;
+}
+
+/* Mobile — remove line */
+@media (max-width: 900px) {
+    .process-grid::before {
+        display: none;
+    }
+
+    .process-icon {
+        margin-bottom: 14px;
+    }
+}
+
+/* ---------------------------------------------------
    PORTFOLIO — PROFESSIONAL REDESIGN
 --------------------------------------------------- */
 .portfolio-section {
@@ -244,7 +317,7 @@ h1, h2, h3 {
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    background: #000;
+    background: #ededed;
     box-shadow: 0 15px 35px rgba(0,0,0,0.15);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
