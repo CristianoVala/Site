@@ -346,9 +346,7 @@ h1, h2, h3 {
     }
 }
 
-/* ---------------------------------------------------
-   SOCIAL MEDIA MANAGEMENT — CARD STYLE
---------------------------------------------------- */
+/* SOCIAL MEDIA CARD */
 .social-section {
     padding: 60px 0;
 }
@@ -367,7 +365,7 @@ h1, h2, h3 {
     display: flex;
     gap: 25px;
     justify-content: center;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     flex-wrap: wrap;
 }
 
@@ -384,38 +382,72 @@ h1, h2, h3 {
     color: #0066ff;
 }
 
-/* Toggle button (mobile only) */
+/* Toggle button — visually obvious */
 .social-toggle {
-    display: none;
     width: 100%;
-    background: none;
+    background: #0066ff;       /* blue button background */
+    color: #fff;               /* white text */
     border: none;
+    border-radius: 30px;       /* pill shape */
     font-size: 1.05rem;
     font-weight: 600;
-    padding: 15px 0;
+    padding: 12px 20px;
     cursor: pointer;
-    color: #111;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    transition: background 0.3s, transform 0.3s;
+}
+
+.social-toggle:hover {
+    background: #004ecc;       /* darker on hover */
 }
 
 .social-toggle span {
-    font-size: 1.4rem;
+    display: inline-block;
     transition: transform 0.3s ease;
 }
 
-/* Content */
+/* Rotate arrow when active */
+.social-card.active .social-toggle span {
+    transform: rotate(180deg);
+}
+
+/* Arrow symbol using Unicode */
+.social-toggle span::before {
+    content: "▼";               /* down arrow */
+    display: inline-block;
+    margin-left: 8px;
+    font-size: 1rem;
+    transition: transform 0.3s;
+}
+
+/* Collapsible content */
 .social-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
     margin-top: 10px;
 }
 
+.social-card.active .social-content {
+    max-height: 500px;
+}
+
+.social-card.active .social-toggle span {
+    transform: rotate(45deg);
+}
+
+/* List style */
 .social-list {
     list-style: none;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 14px 20px;
+    margin-top: 10px;
 }
 
 .social-list li {
@@ -430,37 +462,17 @@ h1, h2, h3 {
     font-size: 0.95rem;
 }
 
-/* ---------------------------------------------------
-   MOBILE COLLAPSE
---------------------------------------------------- */
+/* Mobile adjustments */
 @media (max-width: 600px) {
-
     .social-card {
         padding: 25px 22px;
-    }
-
-    .social-toggle {
-        display: flex;
-    }
-
-    .social-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.4s ease;
-    }
-
-    .social-card.active .social-content {
-        max-height: 500px;
-    }
-
-    .social-card.active .social-toggle span {
-        transform: rotate(45deg);
     }
 
     .social-list {
         grid-template-columns: 1fr;
     }
 }
+
 
 /* ---------------------------------------------------
    PORTFOLIO — PROFESSIONAL REDESIGN
