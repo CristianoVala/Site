@@ -266,32 +266,46 @@ h1, h2, h3 {
     transition: transform 0.5s ease, filter 0.5s ease;
 }
 
-/* Overlay */
+/* ===== PORTFOLIO CONTRAST FIX ===== */
+
 .portfolio-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(
         to top,
-        rgba(0,0,0,0.85),
-        rgba(0,0,0,0.35),
-        rgba(0,0,0,0.1)
+        rgba(0,0,0,0.92),
+        rgba(0,0,0,0.65),
+        rgba(0,0,0,0.25)
     );
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 25px;
-    transition: background 0.4s ease;
+    padding: 24px;
 }
 
+/* Text container */
 .portfolio-overlay h3 {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
     margin-bottom: 6px;
-    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.85);
 }
 
 .portfolio-overlay span {
     font-size: 0.95rem;
-    opacity: 0.85;
+    font-weight: 500;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 2px 6px rgba(0,0,0,0.8);
+}
+
+/* Optional: subtle backing panel for extreme cases */
+.portfolio-overlay h3,
+.portfolio-overlay span {
+    background: rgba(0,0,0,0.35);
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
 /* Hover Effects */
