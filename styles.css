@@ -592,7 +592,7 @@ h1, h2, h3 {
 /* Lines */
 .line {
     fill: none;
-    stroke-width: 2.5;
+    stroke-width: 1.5;
     stroke-linecap: round;
     stroke-linejoin: round;
     stroke-dasharray: 150;
