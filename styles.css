@@ -473,6 +473,172 @@ h1, h2, h3 {
     }
 }
 
+/* ---------------------------------------------------
+   SUCCESS STORIES
+--------------------------------------------------- */
+.success-section {
+    padding: 80px 0;
+    background: #f9f9f9;
+}
+
+.success-grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 40px;
+}
+
+.success-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.success-card:hover {
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* Tag */
+.success-tag {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #0066ff;
+    background: rgba(0,102,255,0.1);
+    padding: 6px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+/* Text */
+.success-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 8px;
+    color: #111;
+}
+
+.success-description {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Results list */
+.success-results {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.success-results li {
+    display: flex;
+    align-items: center;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 8px;
+}
+
+.success-results i {
+    color: #0066ff;
+    margin-right: 10px;
+    font-size: 0.85rem;
+}
+
+/* ---------------------------------------------------
+   LINE CHART — BEFORE / AFTER
+--------------------------------------------------- */
+.line-chart {
+    margin-top: 20px;
+}
+
+.chart-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 8px;
+}
+
+.chart-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 20px;
+}
+
+.chart-label.before {
+    background: #e6e6e6;
+    color: #555;
+}
+
+.chart-label.after {
+    background: rgba(0,102,255,0.15);
+    color: #0066ff;
+}
+
+.chart-area {
+    height: 120px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.chart-area svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Lines */
+.line {
+    fill: none;
+    stroke-width: 2.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 150;
+    stroke-dashoffset: 150;
+    animation: drawLine 1.4s ease forwards;
+}
+
+.line.before {
+    stroke: #999;
+}
+
+.line.after {
+    stroke: #0066ff;
+}
+
+/* Animate */
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Timeline */
+.chart-footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    color: #777;
+    margin-top: 6px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .success-card {
+        padding: 25px 22px;
+    }
+
+    .success-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .chart-area {
+        height: 100px;
+    }
+}
+
 
 /* ---------------------------------------------------
    PORTFOLIO — PROFESSIONAL REDESIGN
